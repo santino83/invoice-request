@@ -39,6 +39,7 @@ class CheckoutLayoutProcessor
             'validation' => [],
             'id' => 'want-invoice',
             'checked' => true, //DEFAULT VALUE TO CHECKED
+            'default' => true, // DEFAULT VALUE TO TRUE
             'required' => true //FORCE ELEMENT TO BE REQUIRED
         ];
 
