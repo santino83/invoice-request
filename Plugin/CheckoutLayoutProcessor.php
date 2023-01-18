@@ -50,7 +50,7 @@ class CheckoutLayoutProcessor
                 'template' => 'Hevelop_InvoiceRequest/vat-data-form-renderer',
                 'options' => []
             ],
-            'visible' => true
+            'visible' => true // DEFAULT SET TO VISIBLE
         ];
 
         $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']['payment']['children']['payments-list']['children']['before-place-order']['children']['ec-vat-data-form']['children']['ec_invoice_type'] = [
