@@ -35,9 +35,11 @@ class CheckoutLayoutProcessor
             'dataScope' => 'payment.ec_want_invoice',
             'label' => __('I want invoice'),
             'provider' => 'checkoutProvider',
-            'visible' => true,
+            'visible' => false, // HIDE CHECKBOX IN VIEW
             'validation' => [],
-            'id' => 'want-invoice'
+            'id' => 'want-invoice',
+            'checked' => true, //DEFAULT VALUE TO CHECKED
+            'required' => true //FORCE ELEMENT TO BE REQUIRED
         ];
 
         $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']['payment']['children']['payments-list']['children']['before-place-order']['children']['ec-vat-data-form'] = [
