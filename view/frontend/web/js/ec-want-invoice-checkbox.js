@@ -18,7 +18,9 @@ define([
         initialize: function () {
             this._super();
 
-            this.value.subscribe(function (value) {
+            //this.value.subscribe(function (value) {
+            const value = true;
+
                 let checkoutProvider = registry.get('checkoutProvider');
                 let invoiceRequest = checkoutProvider.getChild('invoiceRequest');
                 if (typeof invoiceRequest == 'undefined') {
@@ -27,7 +29,8 @@ define([
                 invoiceRequest.ec_want_invoice = value ? 1 : 0;
                 checkoutProvider.set('invoiceRequest', invoiceRequest);
                 vatForm().isVatDataFormVisible(value);
-            });
+
+            //});
             return this;
         }
     });
